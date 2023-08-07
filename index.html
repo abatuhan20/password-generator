@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Password Generator</h2>
+            <div class="result-container">
+                <span id="result"> ZART ZURT</span>
+                <button id="copy" class="btn"> <i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <div class="settings">
+            <div class="setting">
+                <label for="len">Password length</label>
+                <input id="len" type="number" value="20" min="4" max="40">
+            </div>
+            <div class="setting">
+                <label>Include uppercase letters</label>
+                <input id="upper" type="checkbox">
+            </div>
+            <div class="setting">
+                <label>Include lowercase letters</label>
+                <input id="lower" type="checkbox">
+            </div>
+            <div class="setting">
+                <label>Include numbers</label>
+                <input id="number" type="checkbox">
+            </div>
+            <div class="setting">
+                <label>Include symbols</label>
+                <input id="symbol" type="checkbox">
+            </div>
+        </div>
+            <div><button id="generate" class="btn btn-large">Generate Password</button></div>
+        </div>
+        <button id="btn2"> SHOW PASSWORDS</button>
+        <div id="passwords-container">  </div>
+
+    </body>
+</html>
