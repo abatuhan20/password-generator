@@ -1,0 +1,29 @@
+name: Build and Deploy
+on: [push] # defaults to master
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run-script build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
+      - name: Install and Build 🔧
+        run: |
+         npm install
+         npm run-script build
+         with:
+          branch: gh-pages
+          folder: dist
